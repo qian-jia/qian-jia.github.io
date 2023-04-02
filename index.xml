@@ -243,4 +243,79 @@ $$&lt;/p></description></item><item><title>Emoji Support</title><link>https://qi
 &lt;p>&lt;strong>N.B.&lt;/strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>.emoji {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title/><link>https://qian-jia.github.io/post/build-a-personal-website-with-github-pages-and-git-236ed6de1abe408c96bce9942154cd39/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://qian-jia.github.io/post/build-a-personal-website-with-github-pages-and-git-236ed6de1abe408c96bce9942154cd39/</guid><description>&lt;h1 id="build-a-personal-website-with-github-pages-and-github-actions">Build a Personal Website with Github Pages and Github Actions&lt;/h1>
+&lt;p>Created: April 2, 2023 1:12 AM
+Tags: website&lt;/p>
+&lt;p>GitHub Pages is a powerful tool for building and hosting static websites, while GitHub Actions allow you to automate your workflows. When combined, they provide an excellent platform for building and deploying your website with ease. In this article, I will show you how did I use GitHub Pages and GitHub Actions to build this personal website.&lt;/p>
+&lt;h2 id="step-1-create-repositories">Step 1: Create Repositories&lt;/h2>
+&lt;p>The first step is to create two new repositories on GitHub. I use one of them as &lt;strong>the GitHub page repository (personal website)&lt;/strong> to store my static website. This one should be named &lt;strong>&lt;code>username.github.io&lt;/code>&lt;/strong>. I use the other one as &lt;strong>the GitHub action repository (website generator)&lt;/strong> to automatically build and deploy the website.&lt;/p>
+&lt;p>To do this, go to your GitHub account and click on the &amp;ldquo;New&amp;rdquo; button. Give your repository a name and a description, and make sure that the GitHub page repository is set to &lt;strong>public&lt;/strong> and the GitHub action repository is set as a &lt;strong>private&lt;/strong> one. You can choose to add a README file, but it&amp;rsquo;s not necessary. Each repository only has a &lt;strong>&lt;code>main&lt;/code>&lt;/strong> branch.&lt;/p>
+&lt;p>The reason I use two repositories instead of one is that it allows me to store the original website content in a private environment.&lt;/p>
+&lt;h2 id="step-2-create-the-website">Step 2: Create the Website&lt;/h2>
+&lt;p>Once your repositories is set up, you can create your website. There are many ways to create a static website. For example, we can install a static site generator like Jekyll, Hugo, Hexo, or Gatsby. These tools allow you to create a website quickly and easily, using templates and themes.&lt;/p>
+&lt;p>In my case, after I created a website, I got website documents shown in the following picture. I uploaded these files to the GitHub action repository.&lt;/p>
+&lt;p>&lt;img src="Build%20a%20Personal%20Website%20with%20Github%20Pages%20and%20Git%20236ed6de1abe408c96bce9942154cd39/Screenshot_2023-04-02_at_13.24.57.png" alt="Screenshot 2023-04-02 at 13.24.57.png">&lt;/p>
+&lt;p>A simple way that I recommend here is to download website components or the example site of a static website theme (e.g., a Hugo website theme) directly from GitHub and upload them to the GitHub action repository we created. In this way, you don’t need to download and install any static site generator. We can directly modify the uploaded website files on GitHub and automatically generate our own website with GitHub actions.&lt;/p>
+&lt;h2 id="step-3-enable-github-pages">Step 3: Enable GitHub Pages&lt;/h2>
+&lt;p>To enable GitHub Pages for your website, go to the settings tab of your repository, and scroll down to the &lt;strong>Code and automation&lt;/strong> section. Under &amp;ldquo;Pages—&amp;gt;Source&amp;rdquo;, select deploy from a branch, then select the branch that contains your static website files (usually &lt;strong>&lt;code>main&lt;/code>&lt;/strong> or &lt;strong>&lt;code>master&lt;/code>&lt;/strong>).&lt;/p>
+&lt;p>Your website should now be live at &lt;strong>&lt;code>username.github.io&lt;/code>&lt;/strong>. If you go to this URL, you should see your website.&lt;/p>
+&lt;h2 id="step-4-set-up-a-github-action-to-deploy-your-website">Step 4: Set Up a GitHub Action to Deploy Your Website&lt;/h2>
+&lt;p>The next step is to set up a GitHub Action to automatically build and deploy your website whenever you push changes to your repository. To do this, you&amp;rsquo;ll need to create a new file in your repository called &lt;strong>&lt;code>.github/workflows/main.yml&lt;/code>&lt;/strong>. This file will contain the instructions for your GitHub Action.&lt;/p>
+&lt;p>Here&amp;rsquo;s an example of what your &lt;strong>&lt;code>main.yml&lt;/code>&lt;/strong> file might look like when you use Hugo:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">GitHub Pages&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">on&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">push&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">branches&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#ae81ff">main &lt;/span> &lt;span style="color:#75715e"># Set a branch name to trigger deployment&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">pull_request&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">jobs&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">deploy&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-22.04&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">permissions&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">contents&lt;/span>: &lt;span style="color:#ae81ff">write&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">concurrency&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">group&lt;/span>: &lt;span style="color:#ae81ff">${{ github.workflow }}-${{ github.ref }}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">steps&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@v3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">with&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">submodules&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span> &lt;span style="color:#75715e"># Fetch Hugo themes (true OR recursive)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">fetch-depth&lt;/span>: &lt;span style="color:#ae81ff">0&lt;/span> &lt;span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Setup Hugo&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">peaceiris/actions-hugo@v2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">with&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">hugo-version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;0.111.3&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">hugo --minify&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Deploy&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">peaceiris/actions-gh-pages@v3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># If you&amp;#39;re changing the branch from main,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># also change the `main` in `refs/heads/main`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># below accordingly.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">if&lt;/span>: &lt;span style="color:#ae81ff">${{ github.ref == &amp;#39;refs/heads/main&amp;#39; }}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">with&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">deploy_key&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.ACTIONS_DEPLOY_KEY }} &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># if you use a different secret name, change &amp;#34;ACTIONS_DEPLOY_KEY&amp;#34; to your secret name. &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># I will show how to setup the deploy key and secret in Step 5.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">external_repository&lt;/span>: &lt;span style="color:#ae81ff">username/username.github.io&lt;/span> &lt;span style="color:#75715e"># change the username!!!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">publish_branch: main # default&lt;/span>: &lt;span style="color:#ae81ff">gh-pages&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">publish_dir&lt;/span>: &lt;span style="color:#ae81ff">./public&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This GitHub Action will run whenever you push changes to the **&lt;code>main&lt;/code>**branch of the GitHub action repository. It will check out your code, build your website using Hugo (or your chosen static site generator), and deploy it to the **&lt;code>main&lt;/code>**branch of the GitHub page repository.&lt;/p>
+&lt;h2 id="step-5-set-up-your-deploy-key">Step 5: Set Up Your Deploy Key&lt;/h2>
+&lt;p>Generate your deploy key with the following command.&lt;/p>
+&lt;pre tabindex="0">&lt;code>ssh-keygen -t rsa -b 4096 -C &amp;#34;your github account email address&amp;#34; -f gh-pages -N &amp;#34;&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>You will get 2 files:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>gh-pages.pub&lt;/code> is a public key&lt;/li>
+&lt;li>&lt;code>gh-pages&lt;/code> is a private key&lt;/li>
+&lt;/ul>
+&lt;p>Next, Go to &lt;strong>Repository Settings&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Go to &lt;strong>Deploy Keys (the GitHub page repository)&lt;/strong> and add your public key with the &lt;strong>Allow write access&lt;/strong>&lt;/li>
+&lt;li>Go to &lt;strong>Secrets (the GitHub action repository)&lt;/strong> and add your private key as &lt;code>ACTIONS_DEPLOY_KEY&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>Your personal website is done! You can access it using the URL in the format &lt;strong>&lt;code>https://&amp;lt;username&amp;gt;.github.io/&lt;/code>&lt;/strong>, where **&lt;code>&amp;lt;username&amp;gt;&lt;/code>**is your GitHub username.&lt;/p></description></item></channel></rss>
