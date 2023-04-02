@@ -3,3 +3,9 @@
 * {
     font-family: 'Quicksand', sans-serif;
 }
+
+.tags {
+    float:left;
+    text-align:center
+}
+
