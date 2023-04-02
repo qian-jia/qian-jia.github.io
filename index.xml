@@ -7,7 +7,7 @@
 &lt;h2 id="step-2-create-the-website">Step 2: Create the Website&lt;/h2>
 &lt;p>Once your repositories is set up, you can create your website. There are many ways to create a static website. For example, we can install a static site generator like Jekyll, Hugo, Hexo, or Gatsby. These tools allow you to create a website quickly and easily, using templates and themes.&lt;/p>
 &lt;p>In my case, after I created a website, I got website documents shown in the following picture. I uploaded these files to the GitHub action repository.&lt;/p>
-&lt;p>&lt;img src="images/website_file.png" alt="website_file.png">&lt;/p>
+&lt;p>&lt;img src="https://qian-jia.github.io/images/website_file.png" alt="website_file.png">&lt;/p>
 &lt;p>A simple way that I recommend here is to download website components or the example site of a static website theme (e.g., a Hugo website theme) directly from GitHub and upload them to the GitHub action repository we created. In this way, you don’t need to download and install any static site generator. We can directly modify the uploaded website files on GitHub and automatically generate our own website with GitHub actions.&lt;/p>
 &lt;h2 id="step-3-enable-github-pages">Step 3: Enable GitHub Pages&lt;/h2>
 &lt;p>To enable GitHub Pages for your website, go to the settings tab of your repository, and scroll down to the &lt;strong>Code and automation&lt;/strong> section. Under &amp;ldquo;Pages—&amp;gt;Source&amp;rdquo;, select deploy from a branch, then select the branch that contains your static website files (usually &lt;code>main&lt;/code> or &lt;code>master&lt;/code>).&lt;/p>
