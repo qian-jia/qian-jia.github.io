@@ -136,45 +136,4 @@ cursor: pointer;
 &lt;div class="s_video_simple __h_video">
 &lt;a href="https://vimeo.com/4.8912912e&amp;#43;07" rel="noopener" target="_blank">
 &lt;img src="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640" srcset="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x" alt="Sing Jan Swing - Kinetic Type">
-&lt;div class="play">&lt;svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61">&lt;circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000">&lt;/circle>&lt;path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff">&lt;/path>&lt;/svg>&lt;/div>&lt;/a>&lt;/div></description></item><item><title>Placeholder Text</title><link>https://qian-jia.github.io/post/placeholder-text/</link><pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate><guid>https://qian-jia.github.io/post/placeholder-text/</guid><description>&lt;p>Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p>
-&lt;p>Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p>
-&lt;ol>
-&lt;li>Exierant elisi ambit vivere dedere&lt;/li>
-&lt;li>Duce pollice&lt;/li>
-&lt;li>Eris modo&lt;/li>
-&lt;li>Spargitque ferrea quos palude&lt;/li>
-&lt;/ol>
-&lt;p>Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.&lt;/p>
-&lt;ol>
-&lt;li>Comas hunc haec pietate fetum procerum dixit&lt;/li>
-&lt;li>Post torum vates letum Tiresia&lt;/li>
-&lt;li>Flumen querellas&lt;/li>
-&lt;li>Arcanaque montibus omnes&lt;/li>
-&lt;li>Quidem et&lt;/li>
-&lt;/ol>
-&lt;h1 id="vagus-elidunt">Vagus elidunt&lt;/h1>
-&lt;p>&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;/p>
-&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon">The Van de Graaf Canon&lt;/a>&lt;/p>
-&lt;h2 id="mane-refeci-capiebant-unda-mulcebat">Mane refeci capiebant unda mulcebat&lt;/h2>
-&lt;p>Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong>Faces illo pepulere&lt;/strong> tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p>
-&lt;p>Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.&lt;/p>
-&lt;p>Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong>mitis temploque&lt;/strong> vocatus, inque alis, &lt;em>oculos nomen&lt;/em> non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong>parte&lt;/strong>.&lt;/p></description></item><item><title>Math Typesetting</title><link>https://qian-jia.github.io/post/math-typesetting/</link><pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate><guid>https://qian-jia.github.io/post/math-typesetting/</guid><description>&lt;p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p>
-&lt;p>In this example we will be using &lt;a href="https://katex.org/">KaTeX&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>Create a partial under &lt;code>/layouts/partials/math.html&lt;/code>&lt;/li>
-&lt;li>Within this partial reference the &lt;a href="https://katex.org/docs/autorender.html">Auto-render Extension&lt;/a> or host these scripts locally.&lt;/li>
-&lt;li>Include the partial in your templates like so:&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">{{&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> or .Params.math .Site.Params.math &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">{{&lt;/span> partial &lt;span style="color:#e6db74">&amp;#34;math.html&amp;#34;&lt;/span> . &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">{{&lt;/span> end &lt;span style="color:#f92672">}}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>To enable KaTex globally set the parameter &lt;code>math&lt;/code> to &lt;code>true&lt;/code> in a project&amp;rsquo;s configuration&lt;/li>
-&lt;li>To enable KaTex on a per page basis include the parameter &lt;code>math: true&lt;/code> in content files&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note:&lt;/strong> Use the online reference of &lt;a href="https://katex.org/docs/supported.html">Supported TeX Functions&lt;/a>&lt;/p>
-&lt;h3 id="examples">Examples&lt;/h3>
-&lt;p>Block math:
-$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$&lt;/p></description></item></channel></rss>
+&lt;div class="play">&lt;svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61">&lt;circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000">&lt;/circle>&lt;path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff">&lt;/path>&lt;/svg>&lt;/div>&lt;/a>&lt;/div></description></item></channel></rss>
