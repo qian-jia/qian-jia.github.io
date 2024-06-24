@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://qian-jia.github.io/sitemap.xml
