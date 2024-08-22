@@ -184,7 +184,7 @@ console.log('code block');
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-246789351" class="chart">&lt;/div>
+&lt;div id="chart-421837695" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -200,7 +200,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-246789351', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-421837695', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -645,4 +645,4 @@ Parallel 4 : des6, after des4, 1d
 &lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> Do something else&lt;/li>
 &lt;/ul>
-&lt;h2 id="did-you-find-this-page-helpful-consider-sharing-it-">Did you find this page helpful? Consider sharing it 🙌&lt;/h2></description></item></channel></rss>
+&lt;h2 id="did-you-find-this-page-helpful-consider-sharing-it-">Did you find this page helpful? Consider sharing it 🙌&lt;/h2></description></item><item><title>Security Patch Management Based on Multi-Agent Reinforcement Learning</title><link>https://qian-jia.github.io/publication/marl-patching-informs2023/</link><pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate><guid>https://qian-jia.github.io/publication/marl-patching-informs2023/</guid><description/></item><item><title>Pioneer or Laggard? Optimal Timing of Enterprise System Patching</title><link>https://qian-jia.github.io/publication/rl-patching-poms/</link><pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate><guid>https://qian-jia.github.io/publication/rl-patching-poms/</guid><description/></item><item><title>A Dynamic Patching Policy for Enterprise Information Systems</title><link>https://qian-jia.github.io/publication/dpp-cswim/</link><pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate><guid>https://qian-jia.github.io/publication/dpp-cswim/</guid><description/></item><item><title>Factors Affecting Consultation Volume in an Online Healthcare Community: Evidence from Online Data in China</title><link>https://qian-jia.github.io/publication/online-healthcare/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://qian-jia.github.io/publication/online-healthcare/</guid><description/></item><item><title>Micro-Fulfillment Center Inventory Policies for Digital Grocery Ecosystem</title><link>https://qian-jia.github.io/publication/mfc-pacis-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://qian-jia.github.io/publication/mfc-pacis-2023/</guid><description/></item></channel></rss>
